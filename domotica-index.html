@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="domotica-style.css" type="text/css" media="screen"/>
+    <script src="domotica-script.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+  // Your web app's Firebase configuration
+    var firebaseConfig = {
+            apiKey: "AIzaSyBQARSfPvk4Wd-d1PAUv3CrvwZA1sOFFDE",
+            authDomain: "verano-iot.firebaseapp.com",
+            databaseURL: "https://verano-iot.firebaseio.com",
+            projectId: "verano-iot",
+            storageBucket: "verano-iot.appspot.com",
+            messagingSenderId: "686118642843",
+            appId: "1:686118642843:web:dd9909c2741d89dc"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>Domotica</title>
+</head>
+<body>
+    <div class="infoContainer">
+        <img class ="avatar" src="https://media.tenor.com/images/ed9b4e0393a6c25090919cc37acb438c/tenor.gif" 
+        alt="https://uploads.scratch.mit.edu/users/avatars/66197102.png">
+        <h1 id="mainTitle">Ejemplo de Domotica</h1>
+        <p id="description">Ejemplo usado para pruebas de domotica, aparte tiene a doge bailando jajaja que curioso</p>
+    </div>
+
+    <div class="controlCenterContainer">
+        <div class="cardContainer">
+            <div class="card" id="cardButton1">
+                <h1 class="cardTitle">Boton 1</h1>
+                <button id="button1" onclick="ejecutar1()">
+                    <i class="material-icons">
+                        add
+                    </i>
+                </button>
+            </div>
+
+            <div class="card" id="cardButton2">
+                <h1 class="cardTitle">Boton 2</h1>
+                <button id="button1" onclick="ejecutar2()">
+                    <i class="material-icons">
+                        add
+                    </i>
+                </button>
+            </div>
+
+            <div class="card" id="cardButton3">
+                <h1 class="cardTitle">Boton 3</h1>
+                <button id="button1" onclick="ejecutar3()">
+                    <i class="material-icons">
+                        add
+                    </i>
+                </button>
+            </div>
+
+            <div class="card" id="cardButton4">
+                <h1 class="cardTitle">Boton 4</h1>
+                <button id="button1" onclick="ejecutar4()">
+                    <i class="material-icons">
+                        add
+                    </i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
