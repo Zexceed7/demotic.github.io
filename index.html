@@ -1,84 +1,365 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="domotica-style.css" type="text/css" media="screen"/>
-    <script src="domotica-script.js"></script>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Rifa de conciertos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Rifa de conciertos</h1>
+								<p>Selecciona el concierto al cual quieres acudir para participar en la rifa.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#Daddy">Daddy Yankee</a></li>
+								<li><a href="#Maluma">Maluma</a></li>
+								<li><a href="#Fobia">Fobia</a></li>
+								<li><a href="#Iron">Iron Maiden</a></li>
+								<li><a href="#Ramm">Rammstein</a></li>
+								<li><a href="#Mon">Mon Laferte</a></li>
+								<li><a href="#Will">Willie Colon</a></li>
+								
+							</ul>
+						</nav>
+					</header>
 
-    <script>
-  // Your web app's Firebase configuration
-    var firebaseConfig = {
-            apiKey: "AIzaSyBQARSfPvk4Wd-d1PAUv3CrvwZA1sOFFDE",
-            authDomain: "verano-iot.firebaseapp.com",
-            databaseURL: "https://verano-iot.firebaseio.com",
-            projectId: "verano-iot",
-            storageBucket: "verano-iot.appspot.com",
-            messagingSenderId: "686118642843",
-            appId: "1:686118642843:web:dd9909c2741d89dc"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
+				<!-- Main -->
+					<div id="main">
 
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-    <title>Domotica</title>
-</head>
-<body>
-    <div class="infoContainer">
-        <img class ="avatar" src="https://media.tenor.com/images/ed9b4e0393a6c25090919cc37acb438c/tenor.gif" 
-        alt="https://uploads.scratch.mit.edu/users/avatars/66197102.png">
-        <h1 id="mainTitle">Ejemplo de Domotica</h1>
-        <p id="description">Ejemplo usado para pruebas de domotica, aparte tiene a doge bailando jajaja que curioso</p>
-    </div>
+						<!-- Intro -->
+							<article id="Daddy">
+								<h2 class="major">Daddy Yankee</h2>
+								<span class="image main"><img src="images/Daddy.jpeg" alt="" /></span>
+								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+								<input type="text" class="card-title" id="card-title" placeholder="Escanea tu badge">
+							</article>
 
-    <div class="controlCenterContainer">
-        <div class="cardContainer">
-            <div class="card" id="cardButton1">
-                <h1 class="cardTitle">Boton 1</h1>
-                <button id="button1" onclick="ejecutar1()">
-                    <i class="material-icons">
-                        add
-                    </i>
-                </button>
-            </div>
+						<!-- Work -->
+							<article id="Maluma">
+								<h2 class="major">Maluma</h2>
+								<span class="image main"><img src="images/Maluma.jpeg" alt="" /></span>
+								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+								<input type="text" class="card-title" id="card-title" placeholder="Escanea tu badge">
+							</article>
 
-            <div class="card" id="cardButton2">
-                <h1 class="cardTitle">Boton 2</h1>
-                <button id="button1" onclick="ejecutar2()">
-                    <i class="material-icons">
-                        add
-                    </i>
-                </button>
-            </div>
+						<!-- About -->
+							<article id="Fobia">
+								<h2 class="major">Fobia</h2>
+								<span class="image main"><img src="images/Fobia.jpeg" alt="" /></span>
+								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+								<input type="text" class="card-title" id="card-title" placeholder="Escanea tu badge">
+							</article>
 
-            <div class="card" id="cardButton3">
-                <h1 class="cardTitle">Boton 3</h1>
-                <button id="button1" onclick="ejecutar3()">
-                    <i class="material-icons">
-                        add
-                    </i>
-                </button>
-            </div>
+						<!-- About -->
+						<article id="Iron">
+							<h2 class="major">Iron Maiden</h2>
+							<span class="image main"><img src="images/Iron.jpeg" alt="" /></span>
+							<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+							<input type="text" class="card-title" id="card-title" placeholder="Escanea tu badge">
+						</article>
 
-            <div class="card" id="cardButton4">
-                <h1 class="cardTitle">Boton 4</h1>
-                <button id="button1" onclick="ejecutar4()">
-                    <i class="material-icons">
-                        add
-                    </i>
-                </button>
-            </div>
+						<!-- About -->
+						<article id="Ramm">
+							<h2 class="major">Rammstein</h2>
+							<span class="image main"><img src="images/Rammstein.jpeg" alt="" /></span>
+							<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+							<input type="text" class="card-title" id="card-title" placeholder="Escanea tu badge">
+						</article>
 
-        </div>
-    </div>
-</body>
+						<!-- About -->
+						<article id="Mon">
+							<h2 class="major">Mon Laferte</h2>
+							<span class="image main"><img src="images/Mon.jpeg" alt="" /></span>
+							<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+							<input type="text" class="card-title" id="card-title" placeholder="Escanea tu badge">
+						</article>
+
+						<!-- About -->
+						<article id="Will">
+							<h2 class="major">Willie Colon</h2>
+							<span class="image main"><img src="images/Will.jpeg" alt="" /></span>
+							<p>Si deseas participar para la rifa de un boleto para Willie Colon, registrate aqui.</p>
+							<input type="text" class="card-title" id="card-title" placeholder="Escanea tu badge">
+							<button class="send-button" onclick="post_blog()">Submit</button>
+
+						</article>
+						
+
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://phonetool.amazon.com/users/amalgonz">amalgonz</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
