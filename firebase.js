@@ -12,6 +12,11 @@ var firebaseConfig = {
 var firebase;
 firebase.initializeApp(firebaseConfig);
 
+function aviso() {
+  alert("Recuerda que la rifa esta limitada a dos registros ");
+  window.location.href = "https://zexceed7.github.io/"
+}
+
 
 
 function post_daddy(){
@@ -20,6 +25,7 @@ function post_daddy(){
     }
     firebase.database().ref("Daddy/").set(blog)
     document.getElementById("daddy-ticket").value="" 
+    aviso()
 };
 
 function post_maluma(){
@@ -28,6 +34,7 @@ function post_maluma(){
   }
   firebase.database().ref("Maluma/").set(blog)
   document.getElementById("maluma-ticket").value="" 
+  aviso()
 };
 
 function post_fobia(){
@@ -36,6 +43,7 @@ function post_fobia(){
   }
   firebase.database().ref("Fobia/").set(blog)
   document.getElementById("fobia-ticket").value="" 
+  aviso()
 };
 
 function post_iron(){
@@ -44,6 +52,7 @@ function post_iron(){
   }
   firebase.database().ref("Iron/").set(blog)
   document.getElementById("iron-ticket").value="" 
+  aviso()
 };
 
 function post_ramm(){
@@ -52,6 +61,7 @@ function post_ramm(){
   }
   firebase.database().ref("Rammstein/").set(blog)
   document.getElementById("ramm-ticket").value="" 
+  aviso()
 };
 
 function post_mon(){
@@ -60,6 +70,7 @@ function post_mon(){
   }
   firebase.database().ref("Mon/").set(blog)
   document.getElementById("mon-ticket").value="" 
+  aviso()
 };
 
 function post_will(){
@@ -68,4 +79,5 @@ function post_will(){
   }
   firebase.database().ref("Will/").set(blog)
   document.getElementById("will-ticket").value="" 
+  aviso()
 };
