@@ -22,7 +22,7 @@ function uuidv4() {
 
 function aviso() {
   setTimeout(function(){
-    alert("La rifa esta limitada a dos registros, mas intentos de registro seran motivo de descalificacion ");
+    alert("La rifa esta limitada a un registro, mas intentos de registro seran motivo de descalificacion ");
     window.location.href = "https://zexceed7.github.io/";
 }, 1500);
 }
