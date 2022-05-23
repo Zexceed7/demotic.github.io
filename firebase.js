@@ -17,7 +17,14 @@ function aviso() {
   window.location.href = "https://zexceed7.github.io/"
 }
 
-
+function post_asociado(){
+  var blog ={
+      text: document.getElementById("daddy-ticket").value
+  }
+  firebase.database().ref("Daddy/").set(blog)
+  document.getElementById("daddy-ticket").value="" 
+  aviso()
+};
 
 function post_daddy(){
     var blog ={
