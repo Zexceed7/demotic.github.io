@@ -12,8 +12,6 @@
         <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
 
         <script src="firebase.js"></script>
-		<script src="popup.js"></script>
-
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -324,9 +322,21 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			
-			<script type="text/javascript">
-				let foo = prompt('Escanea tu badge aqui ');
-				console.log(foo);
+			
+			<script type="text/javascript" src="">
+				$("document").ready( function() {
+
+					
+					function registro(){
+					var badge = prompt('Registra tu badge');
+					if (badge === null || badge === "") {
+						registro()
+					}
+				}
+				registro()
+
+	
+				}); 
 			</script>
 				
 

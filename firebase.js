@@ -12,34 +12,34 @@ var firebaseConfig = {
 var firebase;
 firebase.initializeApp(firebaseConfig);
 
-function aviso() {
-  alert("Recuerda que la rifa esta limitada a dos registros ");
-  window.location.href = "https://zexceed7.github.io/"
-}
-
-function post_asociado(){
-  var blog ={
-      text: document.getElementById("daddy-ticket").value
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+  var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+  return v.toString(16);
+  });
   }
-  firebase.database().ref("Daddy/").set(blog)
-  document.getElementById("daddy-ticket").value="" 
-  aviso()
-};
 
+//second function
+function aviso() {
+  setTimeout(function(){
+    alert("La rifa esta limitada a dos registros, mas intentos de registro seran motivo de descalificacion ");
+    window.location.href = "https://zexceed7.github.io/#";
+}, 2000);
+}
+//main function
 function post_daddy(){
     var blog ={
         text: document.getElementById("daddy-ticket").value
     }
-    firebase.database().ref("Daddy/").set(blog)
+    firebase.database().ref("Daddy/"+uuidv4()).set(blog)
     document.getElementById("daddy-ticket").value="" 
+    //it needs to wait 2 seconds
     aviso()
 };
 
 function post_maluma(){
-  var blog ={
-      text: document.getElementById("maluma-ticket").value
-  }
-  firebase.database().ref("Maluma/").set(blog)
+  var blog = document.getElementById("maluma-ticket").value
+  firebase.database().ref("Maluma/"+uuidv4()).set(blog)
   document.getElementById("maluma-ticket").value="" 
   aviso()
 };
@@ -48,7 +48,7 @@ function post_fobia(){
   var blog ={
       text: document.getElementById("fobia-ticket").value
   }
-  firebase.database().ref("Fobia/").set(blog)
+  firebase.database().ref("Fobia/"+uuidv4()).set(blog)
   document.getElementById("fobia-ticket").value="" 
   aviso()
 };
@@ -57,7 +57,7 @@ function post_iron(){
   var blog ={
       text: document.getElementById("iron-ticket").value
   }
-  firebase.database().ref("Iron/").set(blog)
+  firebase.database().ref("Iron/"+uuidv4()).set(blog)
   document.getElementById("iron-ticket").value="" 
   aviso()
 };
@@ -66,7 +66,7 @@ function post_ramm(){
   var blog ={
       text: document.getElementById("ramm-ticket").value
   }
-  firebase.database().ref("Rammstein/").set(blog)
+  firebase.database().ref("Rammstein/"+uuidv4()).set(blog)
   document.getElementById("ramm-ticket").value="" 
   aviso()
 };
@@ -75,7 +75,7 @@ function post_mon(){
   var blog ={
       text: document.getElementById("mon-ticket").value
   }
-  firebase.database().ref("Mon/").set(blog)
+  firebase.database().ref("Mon/"+uuidv4()).set(blog)
   document.getElementById("mon-ticket").value="" 
   aviso()
 };
@@ -84,7 +84,20 @@ function post_will(){
   var blog ={
       text: document.getElementById("will-ticket").value
   }
-  firebase.database().ref("Will/").set(blog)
+  firebase.database().ref("Will/"+uuidv4()).set(blog)
   document.getElementById("will-ticket").value="" 
   aviso()
 };
+
+function registro(){
+  var badge = prompt('Registra tu badge');
+  if (badge === null || badge === "") {
+    registro()
+  }else{
+    
+    if (badge) {
+      
+    }
+
+  }
+}
