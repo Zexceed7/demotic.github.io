@@ -19,21 +19,20 @@ function uuidv4() {
   });
   }
 
-//second function
+
 function aviso() {
   setTimeout(function(){
     alert("La rifa esta limitada a dos registros, mas intentos de registro seran motivo de descalificacion ");
-    window.location.href = "https://zexceed7.github.io/#";
-}, 2000);
+    window.location.href = "https://zexceed7.github.io/";
+}, 1500);
 }
-//main function
+
 function post_daddy(){
     var blog ={
         text: document.getElementById("daddy-ticket").value
     }
     firebase.database().ref("Daddy/"+uuidv4()).set(blog)
     document.getElementById("daddy-ticket").value="" 
-    //it needs to wait 2 seconds
     aviso()
 };
 
