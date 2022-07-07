@@ -29,51 +29,21 @@ function aviso() {
 
 function post_daddy(){
     var blog = document.getElementById("daddy-ticket").value
-    firebase.database().ref("Daddy/"+uuidv4()).set(blog)
+    firebase.database().ref("OV7/"+uuidv4()).set(blog)
     document.getElementById("daddy-ticket").value="" 
     aviso()
 };
 
 function post_maluma(){
   var blog = document.getElementById("maluma-ticket").value
-  firebase.database().ref("Maluma/"+uuidv4()).set(blog)
+  firebase.database().ref("DLD/"+uuidv4()).set(blog)
   document.getElementById("maluma-ticket").value="" 
   aviso()
 };
 
 function post_fobia(){
   var blog = document.getElementById("fobia-ticket").value
-  firebase.database().ref("Fobia/"+uuidv4()).set(blog)
+  firebase.database().ref("90's Pop Tour/"+uuidv4()).set(blog)
   document.getElementById("fobia-ticket").value="" 
-  aviso()
-};
-
-function post_iron(){
-  var blog = document.getElementById("iron-ticket").value
-  firebase.database().ref("Iron/"+uuidv4()).set(blog)
-  document.getElementById("iron-ticket").value="" 
-  aviso()
-};
-
-function post_ramm(){
-  var blog = document.getElementById("ramm-ticket").value
-  firebase.database().ref("Rammstein/"+uuidv4()).set(blog)
-  document.getElementById("ramm-ticket").value="" 
-  aviso()
-};
-
-function post_mon(){
-  var blog = document.getElementById("mon-ticket").value
- 
-  firebase.database().ref("Mon/"+uuidv4()).set(blog)
-  document.getElementById("mon-ticket").value="" 
-  aviso()
-};
-
-function post_will(){
-  var blog = document.getElementById("will-ticket").value
-  
-  firebase.database().ref("Will/"+uuidv4()).set(blog)
-  document.getElementById("will-ticket").value="" 
   aviso()
 };
